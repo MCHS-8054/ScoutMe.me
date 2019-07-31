@@ -62,7 +62,7 @@
 				<div class="row">
 					<div class="col-md-12 text-light nav justify-content-center">
 						<div class="nav-item">
-							<h5 class=" pt-1 mr-2 d-inline-block">Team: </h5>
+							<h5 class=" pt-1 pb-2 pb-sm-0 mr-2 d-inline-block">Team: </h5>
 							<div class="dropdown mr-3 d-inline-block">
 								<button class="btn dropdown-toggle btn-success text-white" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 									254 - Cheesy Poofs
@@ -109,7 +109,7 @@
 				<div class="row">
 <!-- AUTONOMOUS -->
 				
-					<div class="col-sm-3 offset-sm-2">
+					<div class="col-sm-4 offset-sm-2 pr-sm-5">
 						<div class="row text-center justify-content-center">
 							<h5 class="h5 text-white">Autonomous</h5>
 						</div>
@@ -164,10 +164,16 @@
 							<div>
 							</div>
 						</div>
-					</div>
+
+
+						<div class="row">
+							<div class="col-md-12">
+								<hr class="bg-secondary">
+							</div>
+						</div>
+
 						<!-- Teleop -->
 
-					<div class="col-sm-3 offset-sm-2">
 						<div class="row text-center justify-content-center">
 							<h5 class="h5 text-white">Teleop</h5>
 						</div>
@@ -206,6 +212,103 @@
 								</label>
 							</div>
 						</div>
+					</div>
+
+					<div class="col-sm-4 pl-sm-5">
+
+					<!-- Overall -->
+						<div class="row d-sm-none">
+							<div class="col-md-12">
+								<hr class="bg-secondary">
+							</div>
+						</div>
+
+						<div class="row text-center justify-content-center">
+							<h5 class="h5 text-white">Overall</h5>
+						</div>
+						<div class="row py-2 form-inline justify-content-start px-4 px-sm-0">
+							<label class="text-white-50 mr-1" for="inputPassword2">Highest Stack</label>
+							<input type="number" style="width:50px" class="form-control ml-auto" id="inputPassword2">
+						</div>
+						<div class="row py-2 form-inline justify-content-start px-4 px-sm-0">
+							<label class="text-white-50 mr-1" for="inputPassword2">Avg. Cubes/Stack</label>
+							<input type="number" style="width:50px" class="form-control ml-auto" id="inputPassword2">
+						</div>
+						<div class="row py-2 form-inline justify-content-start px-4 px-sm-0">
+							<label class="text-white-50 mr-1" for="inputPassword2">Color Focus</label>
+							<div class="btn-group btn-group-toggle ml-auto" data-toggle="buttons">
+								<label class="btn btn-success">
+									<input type="radio" name="options" id="option1" autocomplete="off">Orange
+								</label>
+								<label class="btn btn-success">
+									<input type="radio" name="options" id="option2" autocomplete="off">Green
+								</label>
+								<label class="btn btn-success">
+									<input type="radio" name="options" id="option3" autocomplete="off">Purple
+								</label>
+								<label class="btn btn-success">
+									<input type="radio" name="options" id="option3" autocomplete="off">N/A
+								</label>
+							</div>
+						</div>
+						<div class="row py-2 form-inline justify-content-start px-4 px-sm-0">
+							<label class="text-white-50 mr-1" for="inputPassword2">Defense Rating</label>
+							<div class="btn-group btn-group-toggle ml-auto" data-toggle="buttons">
+								<label class="btn btn-success">
+									<input type="radio" name="options" id="option1" autocomplete="off">1
+								</label>
+								<label class="btn btn-success">
+									<input type="radio" name="options" id="option2" autocomplete="off">2
+								</label>
+								<label class="btn btn-success">
+									<input type="radio" name="options" id="option3" autocomplete="off">3
+								</label>
+								<label class="btn btn-success">
+									<input type="radio" name="options" id="option3" autocomplete="off">4
+								</label>
+								<label class="btn btn-success">
+									<input type="radio" name="options" id="option3" autocomplete="off">5
+								</label>
+								<label class="btn btn-success">
+									<input type="radio" name="options" id="option3" autocomplete="off">N/A
+								</label>
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="col-md-12">
+								<hr class="bg-secondary">
+							</div>
+						</div>
+
+						<!-- Other -->
+						<div class="row text-center justify-content-center">
+							<h5 class="h5 text-white">Other</h5>
+						</div>
+						<div class="row py-2 justify-content-start px-4 px-sm-0">
+							<label class="text-white-50 mr-1" for="inputPassword2">Overall Comments</label>
+							<textarea class="form-control" id="exampleFormControlTextarea1" rows="2"></textarea>
+						</div>
+						<div class="row py-2 justify-content-start px-4 px-sm-0">
+							<label class="text-white-50 mr-1" for="inputPassword2">Notable Strategies</label>
+							<textarea class="form-control" id="exampleFormControlTextarea1" rows="2"></textarea>
+						</div>
+						<div class="row py-2 justify-content-start px-4 px-sm-0">
+							<label class="text-white-50 mr-1" for="inputPassword2">Notable Penalties</label>
+							<textarea class="form-control" id="exampleFormControlTextarea1" rows="2"></textarea>
+						</div>
+					</div>
+				</div>
+
+				<div class="row d-sm-none">
+					<div class="col-md-12">
+						<hr class="bg-secondary">
+					</div>
+				</div>
+
+				<div class="row py-5 justify-content-center">
+					<div class="col-md-2 col-offset-8">
+						<button type="submit" class="btn btn-block btn-lg btn-success">Submit Report</button>
 					</div>
 				</div>
 			</form>
