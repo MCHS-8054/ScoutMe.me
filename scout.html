@@ -58,49 +58,157 @@
 					<h3 class="h3 text-white">Scout<br><small class="text-white-50">Event 1</small></h3>
 				</div>
 			</div>
-			<div class="row">
-				<div class="col-md-12 text-light nav justify-content-center">
-					<div class="nav-item">
-						<h5 class=" pt-1 mr-2 d-inline-block">Team: </h5>
-						<div class="dropdown mr-3 d-inline-block">
-							<button class="btn dropdown-toggle btn-success text-white" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-								254 - Cheesy Poofs
-							</button>
-							<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-								<a class="dropdown-item active" href="?event=1">254 -Cheesy Poofs</a>
-								<a class="dropdown-item" href="?event=2">8054 - Mustang Mechanics</a>
-								<a class="dropdown-item" href="?event=3">330 - ded</a>
-								<a class="dropdown-item" href="?event=4">6636 - RoboWaves</a>
+			<form>
+				<div class="row">
+					<div class="col-md-12 text-light nav justify-content-center">
+						<div class="nav-item">
+							<h5 class=" pt-1 mr-2 d-inline-block">Team: </h5>
+							<div class="dropdown mr-3 d-inline-block">
+								<button class="btn dropdown-toggle btn-success text-white" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+									254 - Cheesy Poofs
+								</button>
+								<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+									<a class="dropdown-item active" href="?event=1">254 -Cheesy Poofs</a>
+									<a class="dropdown-item" href="?event=2">8054 - Mustang Mechanics</a>
+									<a class="dropdown-item" href="?event=3">330 - ded</a>
+									<a class="dropdown-item" href="?event=4">6636 - RoboWaves</a>
+								</div>
 							</div>
 						</div>
-					</div>
-					<div class="nav-item">
-						<h5 class=" pt-1 ml-3 d-inline-block">Match: </h5>
-						<div class="dropdown ml-3 d-inline-block">
-							<button class="btn dropdown-toggle btn-success text-white" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-								Match 1
-							</button>
-							<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-								<a class="dropdown-item active" href="?event=1">Match 1</a>
-								<a class="dropdown-item" href="?event=2">Match 2</a>
-								<a class="dropdown-item" href="?event=3">Match 3</a>
-								<a class="dropdown-item" href="?event=4">Match 4</a>
+						<div class="nav-item pt-2 pt-sm-0">
+							<h5 class=" pt-1 ml-3 d-inline-block">Match: </h5>
+							<div class="dropdown ml-3 d-inline-block">
+								<button class="btn dropdown-toggle btn-success text-white" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+									Match 1
+								</button>
+								<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+									<a class="dropdown-item active" href="?event=1">Match 1</a>
+									<a class="dropdown-item" href="?event=2">Match 2</a>
+									<a class="dropdown-item" href="?event=3">Match 3</a>
+									<a class="dropdown-item" href="?event=4">Match 4</a>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-8 offset-md-2">
-					<hr class="bg-secondary">
+				<div class="row">
+					<div class="col-md-8 offset-md-2">
+						<hr class="bg-secondary">
+					</div>
 				</div>
-			</div>
-			<div class="row justify-content-center">
-				<form class="mb-2 btn-group" style="width:110px">
-					<input type="number" class="px-0 btn btn-light form-control" id="inputPassword2" placeholder="#Lost">
-					<button type="submit" class="btn btn-primary">Go</button>
-				</form>
-			</div>
+				<!--
+				<div class="row justify-content-center">
+					<form class="mb-2 btn-group" style="width:110px">
+						<input type="number" class="px-0 btn btn-light form-control" id="inputPassword2" placeholder="#Lost">
+						<button type="submit" class="btn btn-primary">Go</button>
+					</form>
+				</div>
+				-->
+
+
+				<div class="row">
+<!-- AUTONOMOUS -->
+				
+					<div class="col-sm-3 offset-sm-2">
+						<div class="row text-center justify-content-center">
+							<h5 class="h5 text-white">Autonomous</h5>
+						</div>
+						<div class="row py-2 form-inline justify-content-start">
+							<label class="text-white-50 mr-1" for="inputPassword2">Cubes Stacked</label>
+							<input type="number" style="width:50px" class="form-control ml-auto" id="inputPassword2">
+						</div>
+						<div class="row py-2 form-inline justify-content-start">
+							<label class="text-white-50 mr-1" for="inputPassword2">Cubes Dropped</label>
+							<input type="number" style="width:50px" class="form-control ml-auto" id="inputPassword2">
+						</div>
+						<div class="row py-2 form-inline justify-content-start">
+							<label class="text-white-50 mr-1" for="inputPassword2">Cubes Towered</label>
+							<input type="number" style="width:50px" class="form-control ml-auto" id="inputPassword2">
+						</div>
+						<div class="row py-2 form-inline justify-content-start">
+							<label class="text-white-50 mr-1" for="inputPassword2">Results</label>
+							<div class="btn-group btn-group-toggle ml-auto" data-toggle="buttons">
+								<label class="btn btn-success">
+									<input type="radio" name="options" id="option1" autocomplete="off"> Win
+								</label>
+								<label class="btn btn-success">
+									<input type="radio" name="options" id="option2" autocomplete="off"> Loss
+								</label>
+								<label class="btn btn-success">
+									<input type="radio" name="options" id="option3" autocomplete="off"> Tie
+								</label>
+							</div>
+						</div>
+						<div class="row py-2 form-inline justify-content-start">
+							<label class="text-white-50 mr-1" for="inputPassword2">Auto Rating</label>
+							<div class="btn-group btn-group-toggle ml-auto" data-toggle="buttons">
+								<label class="btn btn-success">
+									<input type="radio" name="options" id="option1" autocomplete="off"> 1
+								</label>
+								<label class="btn btn-success">
+									<input type="radio" name="options" id="option2" autocomplete="off"> 2
+								</label>
+								<label class="btn btn-success">
+									<input type="radio" name="options" id="option3" autocomplete="off"> 3
+								</label>
+								<label class="btn btn-success">
+									<input type="radio" name="options" id="option3" autocomplete="off"> 4
+								</label>
+								<label class="btn btn-success">
+									<input type="radio" name="options" id="option3" autocomplete="off"> 5
+								</label>
+								<label class="btn btn-success">
+									<input type="radio" name="options" id="option3" autocomplete="off"> N/A
+								</label>
+							</div>
+							<div>
+							</div>
+						</div>
+					</div>
+						<!-- Teleop -->
+
+					<div class="col-sm-3 offset-sm-2">
+						<div class="row text-center justify-content-center">
+							<h5 class="h5 text-white">Teleop</h5>
+						</div>
+						<div class="row py-2 form-inline justify-content-start">
+							<label class="text-white-50 mr-1" for="inputPassword2">Cubes Stacked</label>
+							<input type="number" style="width:50px" class="form-control ml-auto" id="inputPassword2">
+						</div>
+						<div class="row py-2 form-inline justify-content-start">
+							<label class="text-white-50 mr-1" for="inputPassword2">Cubes Dropped</label>
+							<input type="number" style="width:50px" class="form-control ml-auto" id="inputPassword2">
+						</div>
+						<div class="row py-2 form-inline justify-content-start">
+							<label class="text-white-50 mr-1" for="inputPassword2">Cubes Towered</label>
+							<input type="number" style="width:50px" class="form-control ml-auto" id="inputPassword2">
+						</div>
+						<div class="row py-2 form-inline justify-content-start">
+							<label class="text-white-50 mr-1" for="inputPassword2">Driver Rating</label>
+							<div class="btn-group btn-group-toggle ml-auto" data-toggle="buttons">
+								<label class="btn btn-success">
+									<input type="radio" name="options" id="option1" autocomplete="off"> 1
+								</label>
+								<label class="btn btn-success">
+									<input type="radio" name="options" id="option2" autocomplete="off"> 2
+								</label>
+								<label class="btn btn-success">
+									<input type="radio" name="options" id="option3" autocomplete="off"> 3
+								</label>
+								<label class="btn btn-success">
+									<input type="radio" name="options" id="option3" autocomplete="off"> 4
+								</label>
+								<label class="btn btn-success">
+									<input type="radio" name="options" id="option3" autocomplete="off"> 5
+								</label>
+								<label class="btn btn-success">
+									<input type="radio" name="options" id="option3" autocomplete="off"> N/A
+								</label>
+							</div>
+						</div>
+					</div>
+				</div>
+			</form>
 		</div>
 	</main>
 
@@ -113,5 +221,6 @@
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
 </body>
 </html>
