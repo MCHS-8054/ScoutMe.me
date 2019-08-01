@@ -11,8 +11,10 @@
 	<link rel="stylesheet" type="text/css" href="styles.css">
 
 	<script>
-		function change(value, eIndex){
-        	document.getElementById("count" + eIndex).value+=value;
+		function change(changeVal, eIndex){
+			var intVal = parseInt(document.getElementById("count" + eIndex).value)
+
+        	document.getElementById("count" + eIndex).value = ((intVal + changeVal) < 0 || (intVal + changeVal) > 66) ? intVal : intVal + changeVal;
         }
      </script>
 
@@ -123,18 +125,26 @@
 						<div class="row py-2 form-inline justify-content-end px-4 px-sm-0">
 							<label class="text-white-50 mr-auto" for="inputPassword2">Cubes Stacked</label>
 							<div class="btn-group">
-								<button class="btn btn-success" onclick="change(-1,'1')"><b>-</b></button>
-								<input type="number" id="count1" value="0" style="width:50px" class="pl-2 btn-white" id="inputPassword2">
-								<button class="btn btn-success" onclick="change(1,'1')"><b>+</b></button>
+								<button type="button" class="btn btn-success" onclick="change(-1,'1')"><b>-</b></button>
+								<input type="number" id="count1" value="0" style="width:50px" class="pl-2 btn-white">
+								<button type="button" class="btn btn-success" onclick="change(1,'1')"><b>+</b></button>
 							</div>
 						</div>
 						<div class="row py-2 form-inline justify-content-end px-4 px-sm-0">
 							<label class="text-white-50 mr-auto" for="inputPassword2">Cubes Dropped</label>
-							<input type="number" id="count2" value="0" style="width:60px" class="form-control " id="inputPassword2">
+							<div class="btn-group">
+								<button type="button" class="btn btn-success" onclick="change(-1,'2')"><b>-</b></button>
+								<input type="number" id="count2" value="0" style="width:50px" class="pl-2 btn-white">
+								<button type="button" class="btn btn-success" onclick="change(1,'2')"><b>+</b></button>
+							</div>
 						</div>
 						<div class="row py-2 form-inline justify-content-end px-4 px-sm-0">
 							<label class="text-white-50 mr-auto" for="inputPassword2">Cubes Towered</label>
-							<input type="number" id="count3" value="0" style="width:60px" class="form-control " id="inputPassword2">
+							<div class="btn-group">
+								<button type="button" class="btn btn-success" onclick="change(-1,'3')"><b>-</b></button>
+								<input type="number" id="count3" value="0" style="width:50px" class="pl-2 btn-white">
+								<button type="button" class="btn btn-success" onclick="change(1,'3')"><b>+</b></button>
+							</div>
 						</div>
 						<div class="row py-2 form-inline justify-content-end px-4 px-sm-0">
 							<label class="text-white-50 mr-auto" for="inputPassword2">Results</label>
@@ -190,15 +200,27 @@
 						</div>
 						<div class="row py-2 form-inline px-4 px-sm-0">
 							<label class="text-white-50 mr-auto" for="inputPassword2">Cubes Stacked</label>
-							<input type="number" id="count4" value="0" style="width:60px" class="form-control " id="inputPassword2">
+							<div class="btn-group">
+								<button type="button" class="btn btn-success" onclick="change(-1,'4')"><b>-</b></button>
+								<input type="number" id="count4" value="0" style="width:50px" class="pl-2 btn-white">
+								<button type="button" class="btn btn-success" onclick="change(1,'4')"><b>+</b></button>
+							</div>
 						</div>
 						<div class="row py-2 form-inline justify-content-end px-4 px-sm-0">
 							<label class="text-white-50 mr-auto" for="inputPassword2">Cubes Dropped</label>
-							<input type="number" id="count5" value="0" style="width:60px" class="form-control " id="inputPassword2">
+							<div class="btn-group">
+								<button type="button" class="btn btn-success" onclick="change(-1,'5')"><b>-</b></button>
+								<input type="number" id="count5" value="0" style="width:50px" class="pl-2 btn-white">
+								<button type="button" class="btn btn-success" onclick="change(1,'5')"><b>+</b></button>
+							</div>
 						</div>
 						<div class="row py-2 form-inline justify-content-end px-4 px-sm-0">
 							<label class="text-white-50 mr-auto" for="inputPassword2">Cubes Towered</label>
-							<input type="number" id="count6" value="0" style="width:60px" class="form-control " id="inputPassword2">
+							<div class="btn-group">
+								<button type="button" class="btn btn-success" onclick="change(-1,'6')"><b>-</b></button>
+								<input type="number" id="count6" value="0" style="width:50px" class="pl-2 btn-white">
+								<button type="button" class="btn btn-success" onclick="change(1,'6')"><b>+</b></button>
+							</div>
 						</div>
 						<div class="row py-2 form-inline justify-content-end px-4 px-sm-0">
 							<label class="text-white-50 mr-auto" for="inputPassword2">Driver Rating</label>
@@ -239,11 +261,19 @@
 						</div>
 						<div class="row py-2 form-inline justify-content-end px-4 px-sm-0">
 							<label class="text-white-50 mr-auto" for="inputPassword2">Highest Stack</label>
-							<input type="number" id="count7" value="0" style="width:60px" class="form-control " id="inputPassword2">
+							<div class="btn-group">
+								<button type="button" class="btn btn-success" onclick="change(-1,'7')"><b>-</b></button>
+								<input type="number" id="count7" value="0" style="width:50px" class="pl-2 btn-white">
+								<button type="button" class="btn btn-success" onclick="change(1,'7')"><b>+</b></button>
+							</div>
 						</div>
 						<div class="row py-2 form-inline justify-content-end px-4 px-sm-0">
 							<label class="text-white-50 mr-auto" for="inputPassword2">Total Stacks</label>
-							<input type="number" id="count8" value="0" style="width:60px" class="form-control " id="inputPassword2">
+							<div class="btn-group">
+								<button type="button" class="btn btn-success" onclick="change(-1,'8')"><b>-</b></button>
+								<input type="number" id="count8" value="0" style="width:50px" class="pl-2 btn-white">
+								<button type="button" class="btn btn-success" onclick="change(1,'8')"><b>+</b></button>
+							</div>
 						</div>
 						<div class="row py-2 form-inline justify-content-end px-4 px-sm-0">
 							<label class="text-white-50 mr-auto" for="inputPassword2">Color Focus</label>
