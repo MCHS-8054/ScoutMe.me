@@ -1,4 +1,12 @@
 .text-image-center {
-	position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);
-	font-size:100px;
+  position: absolute;
+  left: 0;
+  top: 35%;
+  width: 100%;
+  text-align: center;
+	font-size:8vw;
+}
+
+.m-nav-compensate {
+	margin-top:62px;
 }

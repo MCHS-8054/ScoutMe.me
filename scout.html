@@ -9,10 +9,17 @@
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
 	<link rel="stylesheet" type="text/css" href="styles.css">
+
+	<script>
+		function change(value, eIndex){
+        	document.getElementById("count" + eIndex).value+=value;
+        }
+     </script>
+
 </head>
 <body>
 	<header>
-		<nav class="navbar navbar-expand-md navbar-dark bg-success" role="navigation">
+		<nav class="navbar navbar-expand-md navbar-dark bg-success fixed-top" role="navigation">
 			<a href="index.html" class="navbar-brand p-2">ScoutMe</a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
@@ -52,7 +59,7 @@
 	</header>
 
 	<main role="main">
-		<div class="container-fluid bg-dark">
+		<div class="container-fluid bg-dark m-nav-compensate">
 			<div class="row">
 				<div class="col-md-12 text-center pt-4 pb-3">
 					<h3 class="h3 text-white">Scout<br><small class="text-white-50">Event 1</small></h3>
@@ -113,21 +120,25 @@
 						<div class="row text-center justify-content-center">
 							<h5 class="h5 text-white">Autonomous</h5>
 						</div>
-						<div class="row py-2 form-inline justify-content-start px-4 px-sm-0">
-							<label class="text-white-50 mr-1" for="inputPassword2">Cubes Stacked</label>
-							<input type="number" style="width:60px" class="form-control ml-auto" id="inputPassword2">
+						<div class="row py-2 form-inline justify-content-end px-4 px-sm-0">
+							<label class="text-white-50 mr-auto" for="inputPassword2">Cubes Stacked</label>
+							<div class="btn-group">
+								<button class="btn btn-success" onclick="change(-1,'1')"><b>-</b></button>
+								<input type="number" id="count1" value="0" style="width:50px" class="pl-2 btn-white" id="inputPassword2">
+								<button class="btn btn-success" onclick="change(1,'1')"><b>+</b></button>
+							</div>
 						</div>
-						<div class="row py-2 form-inline justify-content-start px-4 px-sm-0">
-							<label class="text-white-50 mr-1" for="inputPassword2">Cubes Dropped</label>
-							<input type="number" style="width:60px" class="form-control ml-auto" id="inputPassword2">
+						<div class="row py-2 form-inline justify-content-end px-4 px-sm-0">
+							<label class="text-white-50 mr-auto" for="inputPassword2">Cubes Dropped</label>
+							<input type="number" id="count2" value="0" style="width:60px" class="form-control " id="inputPassword2">
 						</div>
-						<div class="row py-2 form-inline justify-content-start px-4 px-sm-0">
-							<label class="text-white-50 mr-1" for="inputPassword2">Cubes Towered</label>
-							<input type="number" style="width:60px" class="form-control ml-auto" id="inputPassword2">
+						<div class="row py-2 form-inline justify-content-end px-4 px-sm-0">
+							<label class="text-white-50 mr-auto" for="inputPassword2">Cubes Towered</label>
+							<input type="number" id="count3" value="0" style="width:60px" class="form-control " id="inputPassword2">
 						</div>
-						<div class="row py-2 form-inline justify-content-start px-4 px-sm-0">
-							<label class="text-white-50 mr-1" for="inputPassword2">Results</label>
-							<div class="btn-group btn-group-toggle ml-auto" data-toggle="buttons">
+						<div class="row py-2 form-inline justify-content-end px-4 px-sm-0">
+							<label class="text-white-50 mr-auto" for="inputPassword2">Results</label>
+							<div class="btn-group btn-group-toggle " data-toggle="buttons">
 								<label class="btn btn-success">
 									<input type="radio" name="options" id="option1" autocomplete="off"> Win
 								</label>
@@ -139,9 +150,9 @@
 								</label>
 							</div>
 						</div>
-						<div class="row py-2 form-inline justify-content-start px-4 px-sm-0">
-							<label class="text-white-50 mr-1" for="inputPassword2">Auto Rating</label>
-							<div class="btn-group btn-group-toggle ml-auto" data-toggle="buttons">
+						<div class="row py-2 form-inline justify-content-end px-4 px-sm-0">
+							<label class="text-white-50 mr-auto" for="inputPassword2">Auto Rating</label>
+							<div class="btn-group btn-group-toggle " data-toggle="buttons">
 								<label class="btn btn-success">
 									<input type="radio" name="options" id="option1" autocomplete="off"> 1
 								</label>
@@ -177,21 +188,21 @@
 						<div class="row text-center justify-content-center">
 							<h5 class="h5 text-white">Teleop</h5>
 						</div>
-						<div class="row py-2 form-inline justify-content-start px-4 px-sm-0">
-							<label class="text-white-50 mr-1" for="inputPassword2">Cubes Stacked</label>
-							<input type="number" style="width:60px" class="form-control ml-auto" id="inputPassword2">
+						<div class="row py-2 form-inline px-4 px-sm-0">
+							<label class="text-white-50 mr-auto" for="inputPassword2">Cubes Stacked</label>
+							<input type="number" id="count4" value="0" style="width:60px" class="form-control " id="inputPassword2">
 						</div>
-						<div class="row py-2 form-inline justify-content-start px-4 px-sm-0">
-							<label class="text-white-50 mr-1" for="inputPassword2">Cubes Dropped</label>
-							<input type="number" style="width:60px" class="form-control ml-auto" id="inputPassword2">
+						<div class="row py-2 form-inline justify-content-end px-4 px-sm-0">
+							<label class="text-white-50 mr-auto" for="inputPassword2">Cubes Dropped</label>
+							<input type="number" id="count5" value="0" style="width:60px" class="form-control " id="inputPassword2">
 						</div>
-						<div class="row py-2 form-inline justify-content-start px-4 px-sm-0">
-							<label class="text-white-50 mr-1" for="inputPassword2">Cubes Towered</label>
-							<input type="number" style="width:60px" class="form-control ml-auto" id="inputPassword2">
+						<div class="row py-2 form-inline justify-content-end px-4 px-sm-0">
+							<label class="text-white-50 mr-auto" for="inputPassword2">Cubes Towered</label>
+							<input type="number" id="count6" value="0" style="width:60px" class="form-control " id="inputPassword2">
 						</div>
-						<div class="row py-2 form-inline justify-content-start px-4 px-sm-0">
-							<label class="text-white-50 mr-1" for="inputPassword2">Driver Rating</label>
-							<div class="btn-group btn-group-toggle ml-auto" data-toggle="buttons">
+						<div class="row py-2 form-inline justify-content-end px-4 px-sm-0">
+							<label class="text-white-50 mr-auto" for="inputPassword2">Driver Rating</label>
+							<div class="btn-group btn-group-toggle " data-toggle="buttons">
 								<label class="btn btn-success">
 									<input type="radio" name="options" id="option1" autocomplete="off"> 1
 								</label>
@@ -226,17 +237,17 @@
 						<div class="row text-center justify-content-center">
 							<h5 class="h5 text-white">Overall</h5>
 						</div>
-						<div class="row py-2 form-inline justify-content-start px-4 px-sm-0">
-							<label class="text-white-50 mr-1" for="inputPassword2">Highest Stack</label>
-							<input type="number" style="width:60px" class="form-control ml-auto" id="inputPassword2">
+						<div class="row py-2 form-inline justify-content-end px-4 px-sm-0">
+							<label class="text-white-50 mr-auto" for="inputPassword2">Highest Stack</label>
+							<input type="number" id="count7" value="0" style="width:60px" class="form-control " id="inputPassword2">
 						</div>
-						<div class="row py-2 form-inline justify-content-start px-4 px-sm-0">
-							<label class="text-white-50 mr-1" for="inputPassword2">Avg. Cubes/Stack</label>
-							<input type="number" style="width:60px" class="form-control ml-auto" id="inputPassword2">
+						<div class="row py-2 form-inline justify-content-end px-4 px-sm-0">
+							<label class="text-white-50 mr-auto" for="inputPassword2">Total Stacks</label>
+							<input type="number" id="count8" value="0" style="width:60px" class="form-control " id="inputPassword2">
 						</div>
-						<div class="row py-2 form-inline justify-content-start px-4 px-sm-0">
-							<label class="text-white-50 mr-1" for="inputPassword2">Color Focus</label>
-							<div class="btn-group btn-group-toggle ml-auto" data-toggle="buttons">
+						<div class="row py-2 form-inline justify-content-end px-4 px-sm-0">
+							<label class="text-white-50 mr-auto" for="inputPassword2">Color Focus</label>
+							<div class="btn-group btn-group-toggle " data-toggle="buttons">
 								<label class="btn btn-success">
 									<input type="radio" name="options" id="option1" autocomplete="off">Orange
 								</label>
@@ -251,9 +262,9 @@
 								</label>
 							</div>
 						</div>
-						<div class="row py-2 form-inline justify-content-start px-4 px-sm-0">
-							<label class="text-white-50 mr-1" for="inputPassword2">Defense Rating</label>
-							<div class="btn-group btn-group-toggle ml-auto" data-toggle="buttons">
+						<div class="row py-2 form-inline justify-content-end px-4 px-sm-0">
+							<label class="text-white-50 mr-auto" for="inputPassword2">Defense Rating</label>
+							<div class="btn-group btn-group-toggle " data-toggle="buttons">
 								<label class="btn btn-success">
 									<input type="radio" name="options" id="option1" autocomplete="off">1
 								</label>
@@ -285,16 +296,16 @@
 						<div class="row text-center justify-content-center">
 							<h5 class="h5 text-white">Other</h5>
 						</div>
-						<div class="row py-2 justify-content-start px-4 px-sm-0">
-							<label class="text-white-50 mr-1" for="inputPassword2">Overall Comments</label>
+						<div class="row py-2 justify-content-end px-4 px-sm-0">
+							<label class="text-white-50 mr-auto" for="inputPassword2">Overall Comments</label>
 							<textarea class="form-control" id="exampleFormControlTextarea1" rows="2"></textarea>
 						</div>
-						<div class="row py-2 justify-content-start px-4 px-sm-0">
-							<label class="text-white-50 mr-1" for="inputPassword2">Notable Strategies</label>
+						<div class="row py-2 justify-content-end px-4 px-sm-0">
+							<label class="text-white-50 mr-auto" for="inputPassword2">Notable Strategies</label>
 							<textarea class="form-control" id="exampleFormControlTextarea1" rows="2"></textarea>
 						</div>
-						<div class="row py-2 justify-content-start px-4 px-sm-0">
-							<label class="text-white-50 mr-1" for="inputPassword2">Notable Penalties</label>
+						<div class="row py-2 justify-content-end px-4 px-sm-0">
+							<label class="text-white-50 mr-auto" for="inputPassword2">Notable Penalties</label>
 							<textarea class="form-control" id="exampleFormControlTextarea1" rows="2"></textarea>
 						</div>
 					</div>
